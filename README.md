@@ -3,6 +3,8 @@
 Creator: Max Oltersdorf
 
 Project Title: Cuda Particels
+Project Wiki:
+https://github.com/OltersdorfTechnology/CudaParticals/wiki
 
 Project Goal:
 

@@ -17,15 +17,19 @@ bl_info = {
     "description" : "Enables the use of NIVIDA CUDA for Large realistic Particle Simulations",
     "blender" : (2, 80, 0),
     "version" : (0, 0, 1),
-    "location" : "",
-    "warning" : "",
-    "category" : "Generic"
+    "location" : "TBD", # This is a new Editor? custom node system
+    "warning" : "IN EARLY DEVELOPMENT",
+    "category" : "Physics"
+    "wiki_url": "https://github.com/OltersdorfTechnology/CudaParticals/wiki",
+    "tracker_url": "https://github.com/OltersdorfTechnology/CudaParticals/issues",
+    "support": "DEVELOPMEMT",
 }
 
 # import from multile files that mak-up the addon
 # # from . "file name" import "class"
 from . import auto_load
 from . Interface_CudaParticals_Panel import Interface_PT_Panel
+# "development_ui_classes.py" is "go-by" for "Interface_CudaParticals_Panel.py"
 
 auto_load.init()
 

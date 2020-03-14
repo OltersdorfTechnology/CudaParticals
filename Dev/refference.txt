@@ -1,1 +1,5 @@
 space_node.py - P:\Engineering\Virtual Design\Projects\OT-100 - Blender2_8x_Cuda Particals\BlenderClone\blender\release\scripts\startup\bl_ui
+new editor - https://devtalk.blender.org/t/developing-a-new-editor/894/5
+
+according to https://archive.blender.org/wiki/index.php/Dev:Source/UI/Tutorials/AddAnEditor/
+    need to actualy fork blender2_8x in order to add a new editor type (its not a simple register a new DNA_space_type)

@@ -17,24 +17,42 @@ bl_info = {
     "description" : "Enables the use of NIVIDA CUDA for Large realistic Particle Simulations",
     "blender" : (2, 80, 0),
     "version" : (0, 0, 1),
-    "location" : "TBD", # This is a new Editor? custom node system
+    "location" : "General", # This is a new Editor? custom node system
     "warning" : "IN EARLY DEVELOPMENT",
     "category" : "Physics"
-    "wiki_url": "https://github.com/OltersdorfTechnology/CudaParticals/wiki",
-    "tracker_url": "https://github.com/OltersdorfTechnology/CudaParticals/issues",
+    #"wiki_url": "'https://github.com/OltersdorfTechnology/CudaParticals/wiki'",
+    #"tracker_url": "https://github.com/OltersdorfTechnology/CudaParticals/issues",
     "support": "DEVELOPMEMT",
 }
 
 # import from multile files that mak-up the addon
 # # from . "file name" import "class"
-from . import auto_load
-from . Interface_CudaParticals_Panel import Interface_PT_Panel
+# from . import auto_load
+from . import Interface_CudaParticals_Panel
+from . import operators_file_export
+from . import operators_file_import
+from . import operators_mesh_add
+from . import operators_node
 # "development_ui_classes.py" is "go-by" for "Interface_CudaParticals_Panel.py"
 
-auto_load.init()
+# auto_load.init()
 
 def register():
-    auto_load.register()
+    #auto_load.register()
+    Interface_CudaParticals_Panel.register()
+    operators_file_export.register()
+    operators_file_import.register()
+    operators_mesh_add.register()
+    operators_node.register()
+
 
 def unregister():
-    auto_load.unregister()
+    #auto_load.unregister()
+    Interface_CudaParticals_Panel.unregister()
+    operators_file_export.unregister()
+    operators_file_import.unregister()
+    operators_mesh_add.unregister()
+    operators_node.unregister()
+
+if __name__ == "__main__":
+    register()

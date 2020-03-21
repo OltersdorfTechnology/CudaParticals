@@ -1,5 +1,14 @@
 import os
 import bpy
+from bpy.types import (
+    Operator,
+    Panel,
+    PropertyGroup,
+)
+from bpy.props import (
+    BoolProperty,
+    EnumProperty,
+)
 bl_info = {
     "name" : "CudaParticals",
     "author" : "Max Oltersdorf",
@@ -13,15 +22,6 @@ bl_info = {
     #"tracker_url": "https://github.com/OltersdorfTechnology/CudaParticals/issues",
     "support" : "Dev",
 }
-from bpy.types import (
-    Operator,
-    Panel,
-    PropertyGroup,
-)
-from bpy.props import (
-    BoolProperty,
-    EnumProperty,
-)
 # Define the interface
 class CudaParticlePanel(bpy.types.Panel):
     bl_idname = "CudaParticle_Panel"
@@ -40,28 +40,20 @@ class CudaParticlePanel(bpy.types.Panel):
 
         #row = layout.row()
         #row.operator("view3d.print_text", text = "Print text", icon='WORLD_DATA')
-        global custom_icons
+        #global custom_icons
         self.layout.label(text="CudaParticle"),
-
+        #custom_icons = None
+        #custom_icons["PARTICLE_POINT"].icon_id
 # end define interface
-icon_value=custom_icons["custom_icon"].icon_id
 # global variable to store icons in
-custom_icons = None
 classes = (
     CudaParticlePanel,
 )
 def register():
-    global custom_icons
-    custom_icons = bpy.utils.previews.new()
-    script_path = bpy.context.space_data.text.filepath
-    icons_dir = os.path.join(os.path.dirname(script_path), "Icons")
-    custom_icons.load("Tool_Icon", os.path.join(icons_dir, "Tool_Icon.png"), 'IMAGE')
     from bpy.utils import register_class
     for cls in classes:
         register_class(cls)
 def unregister():
-    global custom_icons
-    bpy.utils.previews.remove(custom_icons)
     from bpy.utils import unregister_class
     for cls in classes:
         unregister_class(cls)

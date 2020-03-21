@@ -8,7 +8,7 @@ bl_info = {
     "version" : (0, 0, 1),
     "location" : "Properties", # This is a new tab in the "properties section"
     "warning" : "IN EARLY DEVELOPMENT",
-    "category" : "SYSTEM"
+    "category" : "SYSTEM",
     #"wiki_url": "'https://github.com/OltersdorfTechnology/CudaParticals/wiki'",
     #"tracker_url": "https://github.com/OltersdorfTechnology/CudaParticals/issues",
 }

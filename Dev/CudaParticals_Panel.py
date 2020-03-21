@@ -11,6 +11,7 @@ bl_info = {
     "category" : "SYSTEM",
     #"wiki_url": "'https://github.com/OltersdorfTechnology/CudaParticals/wiki'",
     #"tracker_url": "https://github.com/OltersdorfTechnology/CudaParticals/issues",
+    "support" : "Dev",
 }
 from bpy.types import (
     Operator,

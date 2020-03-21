@@ -10,20 +10,7 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
-
-bl_info = {
-    "name" : "CudaParticals",
-    "author" : "Max Oltersdorf",
-    "description" : "Enables the use of NIVIDA CUDA for Large realistic Particle Simulations",
-    "blender" : (2, 80, 0),
-    "version" : (0, 0, 1),
-    "location" : "General", # This is a new Editor? custom node system
-    "warning" : "IN EARLY DEVELOPMENT",
-    "category" : "Physics"
-    #"wiki_url": "'https://github.com/OltersdorfTechnology/CudaParticals/wiki'",
-    #"tracker_url": "https://github.com/OltersdorfTechnology/CudaParticals/issues",
-    "support": "DEVELOPMEMT",
-}
+# ---------------------------------------------------------------------
 
 # import from multile files that mak-up the addon
 # # from . "file name" import "class"
@@ -34,6 +21,22 @@ from . import operators_file_import
 from . import operators_mesh_add
 from . import operators_node
 # "development_ui_classes.py" is "go-by" for "Interface_CudaParticals_Panel.py"
+import os
+import bpy
+
+bl_info = {
+    "name" : "CudaParticals",
+    "author" : "Max Oltersdorf",
+    "description" : "Enables the use of NIVIDA CUDA for Large realistic Particle Simulations",
+    "blender" : (2, 80, 0),
+    "version" : (0, 0, 1),
+    "location" : "Properties", # This is a new tab in the "properties section"
+    "warning" : "IN EARLY DEVELOPMENT",
+    "category" : "Physics"
+    #"wiki_url": "'https://github.com/OltersdorfTechnology/CudaParticals/wiki'",
+    #"tracker_url": "https://github.com/OltersdorfTechnology/CudaParticals/issues",
+    "support": "Testing",
+}
 
 # auto_load.init()
 

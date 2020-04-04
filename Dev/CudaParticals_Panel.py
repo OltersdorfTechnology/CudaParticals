@@ -14,7 +14,7 @@ bl_info = {
     "author" : "Max Oltersdorf",
     "description" : "Enables the use of NIVIDA CUDA for Large realistic Particle Simulations",
     "blender" : (2, 80, 0),
-    "version" : (0, 0, 1),
+    "version" : (0, 0, 2),
     "location" : "Properties", # This is a new tab in the "properties section"
     "warning" : "IN EARLY DEVELOPMENT",
     "category" : "SYSTEM",
